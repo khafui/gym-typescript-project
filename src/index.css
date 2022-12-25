@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
+  @apply text-gray-500;
+}
+
+body::-webkit-scrollbar {
+  @apply w-[10px] bg-primary-500;
+}
+body::-webkit-scrollbar-track {
+  @apply bg-gray-50;
+}
+body::-webkit-scrollbar-thumb {
+  @apply bg-primary-500;
+}
+
+@layer components {
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+  .scrollbarStyle {
+    @apply scrollbar-thin scrollbar-track-gray-50 scrollbar-thumb-primary-500;
+  }
+}
